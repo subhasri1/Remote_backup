@@ -1,0 +1,6 @@
+[INFO] : Socket Create
+[INFO] : Sockaddr_in Initialization 
+[INFO] : Binding Socket with IP 
+[INFO] : Server Waiting For client 
+[INFO] : Accept Client Request 
+[INFO] : Calling Transact_with_client function 

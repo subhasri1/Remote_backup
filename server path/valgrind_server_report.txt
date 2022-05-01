@@ -1,0 +1,63 @@
+==40446== Memcheck, a memory error detector
+==40446== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==40446== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==40446== Command: ./server /home/raajpatel/masterbackup/
+==40446== 
+Server waiting for client to connect
+File Name : lastbackuptime
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/lastbackuptime
+-----------------------------------
+File Name : clientheader.h
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/clientheader.h
+-----------------------------------
+File Name : fileclient.cpp
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/fileclient.cpp
+-----------------------------------
+File Name : test.txt
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/test.txt
+-----------------------------------
+File Name : servC.c
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/servC.c
+-----------------------------------
+File Name : client
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/client
+-----------------------------------
+File Name : file1.txt
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/file1.txt
+-----------------------------------
+File Name : prog.cpp
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/prog.cpp
+-----------------------------------
+File Name : file2.txt
+-----------------------------------
+Path of file to be backed up is : /home/raajpatel/masterbackup/Music/file2.txt
+-----------------------------------
+==40446== 
+==40446== Process terminating with default action of signal 2 (SIGINT)
+==40446==    at 0x4B67000: read (read.c:26)
+==40446==    by 0x10A9BB: transact_with_client(char*, int) (in /home/raajpatel/Desktop/Final full backup/server path/server)
+==40446==    by 0x10A8EA: main (in /home/raajpatel/Desktop/Final full backup/server path/server)
+==40446== 
+==40446== HEAP SUMMARY:
+==40446==     in use at exit: 8,664 bytes in 2 blocks
+==40446==   total heap usage: 49 allocs, 47 frees, 87,336 bytes allocated
+==40446== 
+==40446== LEAK SUMMARY:
+==40446==    definitely lost: 0 bytes in 0 blocks
+==40446==    indirectly lost: 0 bytes in 0 blocks
+==40446==      possibly lost: 0 bytes in 0 blocks
+==40446==    still reachable: 8,664 bytes in 2 blocks
+==40446==         suppressed: 0 bytes in 0 blocks
+==40446== Reachable blocks (those to which a pointer was found) are not shown.
+==40446== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==40446== 
+==40446== For lists of detected and suppressed errors, rerun with: -s
+==40446== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

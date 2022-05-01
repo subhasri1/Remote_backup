@@ -1,0 +1,49 @@
+==40485== Memcheck, a memory error detector
+==40485== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==40485== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==40485== Command: ./client -f /home/raajpatel/Music/
+==40485== 
+-----------------------------------
+Argument no : 2 Source Directory    /home/raajpatel/Music/
+-----------------------------------
+Files to be backed up : /home/raajpatel/Music/lastbackuptime
+==40485== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==40485==    at 0x4B79560: send (send.c:28)
+==40485==    by 0x109C71: sendfromdirectory(char*, int) (in /home/raajpatel/Desktop/Final full backup/server path/client)
+==40485==    by 0x1097AC: main (in /home/raajpatel/Desktop/Final full backup/server path/client)
+==40485==  Address 0x1ffefffb17 is on thread 1's stack
+==40485==  in frame #1, created by sendfromdirectory(char*, int) (???:)
+==40485== 
+Files to be backed up : /home/raajpatel/Music/clientheader.h
+Files to be backed up : /home/raajpatel/Music/makefile
+Files to be backed up : /home/raajpatel/Music/fileserver.cpp
+Files to be backed up : /home/raajpatel/Music/fileclient.cpp
+Files to be backed up : /home/raajpatel/Music/test.txt
+Files to be backed up : /home/raajpatel/Music/servC.c
+Files to be backed up : /home/raajpatel/Music/client
+Files to be backed up : /home/raajpatel/Music/file1.txt
+Files to be backed up : /home/raajpatel/Music/prog.cpp
+Files to be backed up : /home/raajpatel/Music/file2.txt
+==40485== 
+==40485== HEAP SUMMARY:
+==40485==     in use at exit: 32,816 bytes in 1 blocks
+==40485==   total heap usage: 5 allocs, 4 frees, 118,280 bytes allocated
+==40485== 
+==40485== 32,816 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==40485==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==40485==    by 0x4B36F48: __alloc_dir (opendir.c:118)
+==40485==    by 0x4B36F48: opendir_tail (opendir.c:69)
+==40485==    by 0x4B36F48: opendir (opendir.c:92)
+==40485==    by 0x109A25: sendfromdirectory(char*, int) (in /home/raajpatel/Desktop/Final full backup/server path/client)
+==40485==    by 0x1097AC: main (in /home/raajpatel/Desktop/Final full backup/server path/client)
+==40485== 
+==40485== LEAK SUMMARY:
+==40485==    definitely lost: 32,816 bytes in 1 blocks
+==40485==    indirectly lost: 0 bytes in 0 blocks
+==40485==      possibly lost: 0 bytes in 0 blocks
+==40485==    still reachable: 0 bytes in 0 blocks
+==40485==         suppressed: 0 bytes in 0 blocks
+==40485== 
+==40485== Use --track-origins=yes to see where uninitialised values come from
+==40485== For lists of detected and suppressed errors, rerun with: -s
+==40485== ERROR SUMMARY: 12 errors from 2 contexts (suppressed: 0 from 0)
