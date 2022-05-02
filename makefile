@@ -1,5 +1,10 @@
 all:client server
-server:Server.cpp
-	g++ -o server Server.cpp
-client: Client.cpp
-	g++ -o client Client.cpp
+client:fclientmain.cpp fclient.o
+	g++ -o client  fclientmain.cpp fclient.o
+fclient.o:fclient.cpp  fclient.h
+	g++ -c fclient.cpp
+server:fservermain.cpp fserver.o
+	g++ -o server fservermain.cpp fserver.o
+fserver.o:fserver.cpp fserver.h
+	g++ -c fserver.cpp
+
